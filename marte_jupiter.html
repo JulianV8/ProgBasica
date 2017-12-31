@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Peso en varios planetas</title>
+</head>
+<body>
+<h1>Tu peso en otro planeta</h1>
+
+    <script>
+      var planeta = parseInt(prompt("En que planeta desea saber su peso,\n escoja 1 para marte o 2 para jupiter "));
+      var usuario = prompt("Cual es tu peso?");
+      var peso = parseInt(usuario);
+      var g_tierra = 9.8;
+      var g_marte = 3.7;
+      var g_jupiter = 24.8;
+      var peso_final;
+      var lugar;
+      //hallar peso
+      if (planeta == 1)
+      {
+        lugar = "marte";
+        peso_final = (peso * g_marte) / g_tierra;
+      }
+      else if (planeta == 2)
+      {
+        lugar = "jupiter";
+        peso_final = (peso * g_jupiter) / g_tierra;
+      }
+      else
+      {
+        lugar = "Kripton";
+        alert("El planeta ingresado no existe");
+      }
+      peso_final = parseInt(peso_final);
+      document.write("Tu peso en " + lugar + " es: <strong>" + peso_final + " KG </strong>");
+    </script>
+  </body>
+</html>
